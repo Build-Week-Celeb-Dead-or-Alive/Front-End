@@ -6,7 +6,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import UserDataContext from "../contexts/UserDataContext";
 
 import "../styling/components/celebdisplay.scss";
-
+import Timer from "./Timer"
 import UnregisteredPlayerModal from "./UnregisteredPlayerModal";
 
 const CelebDisplay = props => {
@@ -21,6 +21,19 @@ const CelebDisplay = props => {
 
   var start = Date.now();
 
+<<<<<<< HEAD
+  // var myTimer = setTimeout(() => {
+  //   var millis = Date.now() - start;
+  //   // console.log(`millis: ${millis}`)
+  //   console.log("seconds elapsed = " + Math.floor(millis / 1000));
+  //   if (Math.floor(millis / 1000) === 5) {
+  //     setTimer(timer + 1)
+  //     millis = Date.now();
+  //   } else {
+  //     console.log(`not yet`);
+  //   }
+  // }, 5000)
+=======
   var myTimer = setTimeout(() => {
     var millis = Date.now() - start;
     // console.log(`millis: ${millis}`)
@@ -33,6 +46,7 @@ const CelebDisplay = props => {
         console.log(`not yet`)
     }
   }, 5000)
+>>>>>>> 5376aa66a03af771079f42332ccdac19459b42c4
 
   // console.log("USER", user)
   useEffect(() => {
@@ -116,7 +130,7 @@ const CelebDisplay = props => {
         {/* <button onClick={move()}>Test</button> */}
       </div>
       <Card>
-        {/* <div>{myTimer.displayTime}</div> */}
+        <Timer />
         {userData.message}
         <Image
           className="card-image"
